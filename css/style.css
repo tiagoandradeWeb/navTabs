@@ -1,0 +1,24 @@
+@font-face{
+	font-family: "Roboto"; /*Escolha um nome pra sua fonte*/
+	src: url(../fonts/Roboto-Regular.ttf); /*caminho para a fonte*/
+}
+.list-tab{background: #000000; width: 100%; text-align: center; padding: 0;}
+.list-tab ul li{padding: 15px 25px; color:#dbdbdb; font-size: 1.3em; cursor: pointer;}
+.list-tab ul li.ativo{color:#f0a500;}
+.list-tab ul li span{transition: all .5s;}
+.list-tab ul li:hover span{color:#f0a500;}
+.tab-content{background: #f0a500; padding: 25px; position:relative; overflow: hidden}
+.tab-content ul li.ativo{display: block; animation-name: tabAnimate; animation-duration: .5s;}
+.tab-content ul li{width: 100%; display: none;}
+.tab-content h1{font-weight: bold;}
+
+@keyframes tabAnimate{
+	from{
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
